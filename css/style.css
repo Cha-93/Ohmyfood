@@ -6,6 +6,11 @@ html, body {
   font-weight: 400;
 }
 
+.numero {
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+
 body section:nth-of-type(2) {
   background-color: #f6f6f6;
 }
@@ -76,6 +81,22 @@ h2 {
 body section {
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 45px;
+}
+
+.titre1 {
+  display: flex;
+  align-items: center; /* Aligner les éléments au centre verticalement */
+}
+
+.titre1 i {
+  margin-left: 10px; /* Ajoutez une marge à gauche pour séparer l'icône du texte */
+}
+
+/* Ajoutez d'autres styles selon vos besoins */
+.titre1 i {
+  margin-left: 80px; /* Ajoutez une marge à gauche pour séparer l'icône du texte */
+  color: black; /* Définissez la couleur de l'icône en noir */
 }
 
 .categories {
@@ -85,7 +106,8 @@ body section {
   padding: 0 40px 0 30px;
   gap: 30px;
 }
-.categories .choix {
+
+.choix {
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -98,7 +120,7 @@ body section {
   position: relative;
   z-index: 1000;
 }
-.categories .choix i {
+.choix i {
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -121,14 +143,94 @@ body section {
   color: #9356DC; /* Changez la couleur au survol */
 }
 
+.cartes {
+  margin-bottom: 50px;
+  gap: 17px;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.menu2 {
+  position: relative;
+}
+
+.menu2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px; /* Ajustez la longueur du trait selon vos besoins */
+  height: 2px; /* Ajustez l'épaisseur du trait selon vos besoins */
+  background-color: #99E2D0; /* Couleur du trait */
+  top: 18px;
+}
+
+.numero {
+  background-color: purple;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-family: Shrikhand;
+  color: black;
+}
+
+h2 {
+  color: black;
+}
+
+.choix2 {
+  color: black;
+}
+
+.cmenu {
+  color: black;
+}
+
+h3 {
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.selection-subtitle {
+  margin-left: 20px;
+}
+
 .repas {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .repas img {
   width: 100%;
   align-self: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 260px;
+  background-size: cover;
+}
+.repas .fa-regular {
+  margin-top: 20px;
+  margin-right: 25px;
+}
+.repas .fa-solid {
+  margin-top: 20px;
+  margin-right: 25px;
 }
 .repas .selection {
   display: flex;
@@ -143,25 +245,99 @@ body section {
   text-decoration: none;
   color: black;
 }
+.repas h1, .repas h4 {
+  font-family: "Shrikhand", cursive;
+  /* Ajoutez d'autres propriétés CSS au besoin */
+}
+
+.cmenu p {
+  font-size: 11px; /* Ajustez la taille de la police selon vos préférences */
+}
+
+.prix {
+  font-size: 11px;
+}
+
+.choix2 {
+  font-size: 14px;
+}
+
+p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.cmenu {
+  background-color: #fff; /* Couleur de fond en blanc */
+  border-radius: 10px; /* Coins arrondis (ajustez la valeur selon vos préférences) */
+  padding: 15px; /* Espacement à l'intérieur de la div */
+  margin-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 a {
   text-decoration: none;
 }
 
+.contact {
+  color: #ffffff;
+}
+
+.material-symbols-outlined {
+  padding-top: 5px;
+}
+
 .badge-container {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 .badge {
   position: absolute;
   top: 10px; /* Ajustez la position verticale selon vos besoins */
   right: 10px; /* Ajustez la position horizontale pour le coin supérieur droit */
-  background-color: #aaffaa; /* Fond vert clair */
-  color: #006600; /* Texte vert foncé */
+  background-color: #99E2D0;
+  /* Fond vert clair */
+  color: #008766;
+  /* Texte vert foncé */
   padding: 5px 10px; /* Ajustez le rembourrage selon vos besoins */
   border-radius: 0px; /* Coins arrondis */
   font-weight: bold;
+}
+
+.rest {
+  padding-top: 8px;
+}
+
+.menu2 {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.titre1 {
+  font-size: 18px; /* Ajustez la taille du texte selon vos besoins */
+}
+
+.titre1 i {
+  margin-left: 50px;
+  font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+  color: black;
+}
+
+/* Ajoutez d'autres styles selon vos préférences */
+header {
+  position: relative;
+}
+
+.palette {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F6F6F6;
+  padding: 20px; /* Ajustez selon vos besoins */
+  box-sizing: border-box;
 }
 
 footer {
@@ -188,14 +364,19 @@ footer footer a {
   text-decoration: none; /* Pour supprimer le soulignement */
 }
 footer .selection-txt {
-  display: flex;
   align-items: center;
 }
 footer .selection-title {
   margin-right: 10px; /* Ajustez la marge selon vos préférences */
 }
 footer .material-symbols-outlined {
-  padding-top: 25px; /* Ajustez la marge selon vos préférences */
+  padding-right: 10px; /* Ajustez la marge selon vos préférences */
+}
+footer .palette {
+  background-color: #F6F6F6;
+}
+footer h1 {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
