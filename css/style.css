@@ -14,6 +14,12 @@ html, body {
 body section:nth-of-type(2) {
   background-color: #f6f6f6;
 }
+body header i {
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  left: 10px;
+}
 
 #navbar {
   display: flex;
@@ -144,6 +150,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin: 20px;
 }
 
 .menu2 {
@@ -201,7 +208,7 @@ h2 {
   margin-left: 20px;
 }
 
-.repas {
+.repas, .repas2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -209,26 +216,26 @@ h2 {
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.repas img {
+.repas img, .repas2 img {
   width: 100%;
   align-self: center;
   height: 260px;
   background-size: cover;
 }
-.repas .fa-regular {
+.repas .fa-regular, .repas2 .fa-regular {
   margin-top: 20px;
   margin-right: 25px;
 }
-.repas .fa-solid {
+.repas .fa-solid, .repas2 .fa-solid {
   margin-top: 20px;
   margin-right: 25px;
 }
-.repas .selection {
+.repas .selection, .repas2 .selection {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.repas .selection .selection-txt {
+.repas .selection .selection-txt, .repas2 .selection .selection-txt {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -236,7 +243,7 @@ h2 {
   text-decoration: none;
   color: black;
 }
-.repas h1, .repas h4 {
+.repas h1, .repas h4, .repas2 h1, .repas2 h4 {
   font-family: "Shrikhand", cursive;
   /* Ajoutez d'autres propriétés CSS au besoin */
 }
@@ -336,6 +343,7 @@ header {
   background-color: #F6F6F6;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 .palette::before {
   content: "";
@@ -352,6 +360,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.cmenu div:nth-of-type(2) {
+  display: flex;
+  align-items: end;
+}
+.cmenu div:nth-of-type(2) .prix {
+  font-size: 11px;
 }
 
 footer {
@@ -397,18 +413,88 @@ footer h1 {
   color: #9356DC;
 }
 
-#hero-section {
-  background-color: violet;
-  border-radius: 20px; /* Vous pouvez ajuster la valeur selon vos préférences pour le bord arrondi */
-  border: none; /* Pour supprimer la bordure */
+#hero-section2 {
   color: white;
-  padding: 10px 20px; /* Vous pouvez ajuster la valeur pour le rembourrage selon vos préférences */
-  display: block; /* Pour centrer le bouton */
-  margin: auto; /* Pour centrer le bouton */
+  background: linear-gradient(to bottom, #e06fda, #a65cdb);
+  border-radius: 100px;
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 #hero-section:hover {
   /* Ajoutez des styles pour l'état survolé si nécessaire */
+}
+
+.menu0 {
+  margin: 20px; /* Ajoute une marge de 20 pixels en haut et en bas, ajustez la valeur selon vos besoins */
+}
+
+.repas {
+  overflow: hidden;
+}
+
+.repas img {
+  width: 100%;
+  height: 150px; /* Définissez la hauteur souhaitée, ajustez la valeur selon vos besoins */
+  object-fit: cover; /* Garde les proportions et coupe l'image pour l'adapter à la boîte */
+}
+
+@media (min-width: 1024px) {
+  .Fonction {
+    display: flex;
+    padding: 50px 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-self: stretch;
+    background: #FFF;
+  }
+  .choix {
+    width: 322.486px;
+    height: 72.379px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--Background, #F6F6F6);
+    /* Shadow/Instructions */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  .cartes {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
+  }
+  .repas {
+    width: 50%; /* Chaque article occupera 50% de la largeur du conteneur parent */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur spécifiée */
+    padding: 10px; /* Ajoute un espace intérieur autour des articles */
+  }
+  /* Optionnel: ajuster le style des éléments enfants */
+  .selection {
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les éléments internes */
+    align-items: center; /* Aligner verticalement les éléments internes */
+  }
+  .footer-gris {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .footer-gris div,
+  .footer-gris p,
+  .footer-gris a {
+    margin-left: 20px; /* Espace horizontal entre les éléments */
+  }
+  .palette {
+    width: 1055px;
+    height: 1221px;
+    flex-shrink: 0;
+    padding: 30px;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

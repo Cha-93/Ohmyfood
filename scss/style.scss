@@ -27,6 +27,15 @@ body{
     section:nth-of-type(2) {
         background-color: $background-gray;
     }
+
+    header{
+        i{
+            position: absolute;
+            z-index: 9999;
+            top: 10px;
+            left: 10px;
+        }
+    }
 }
 
 #navbar{
@@ -181,6 +190,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin:20px;
 }
 
 .menu2 {
@@ -242,7 +252,7 @@ h2 {
 .selection-subtitle{
     margin-left: 20px;
 }
-.repas {
+.repas , .repas2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -394,6 +404,7 @@ header {
     background-color: #F6F6F6;
     padding: 20px; 
     box-sizing: border-box;
+    position: relative;
 
     &::before{
         content:"";
@@ -412,6 +423,17 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cmenu{
+    div:nth-of-type(2){
+        display: flex;
+        align-items: end;
+
+        .prix {
+            font-size: 11px;
+        }
+    }
 }
 
 footer{
@@ -471,17 +493,101 @@ footer{
 
 }
 
-#hero-section {
-    background-color: violet;
-    border-radius: 20px; /* Vous pouvez ajuster la valeur selon vos préférences pour le bord arrondi */
-    border: none; /* Pour supprimer la bordure */
+#hero-section2 {
     color: white;
-    padding: 10px 20px; /* Vous pouvez ajuster la valeur pour le rembourrage selon vos préférences */
-    display: block; /* Pour centrer le bouton */
-    margin: auto; /* Pour centrer le bouton */
+    background: linear-gradient(to bottom, #e06fda, #a65cdb);
+    border-radius: 100px;
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+
   }
   
   #hero-section:hover {
     /* Ajoutez des styles pour l'état survolé si nécessaire */
   }
+
+  .menu0 {
+    margin: 20px; /* Ajoute une marge de 20 pixels en haut et en bas, ajustez la valeur selon vos besoins */
+  }
+
+  .repas {
+    overflow: hidden;
+  }
   
+  .repas img {
+    width: 100%;
+    height: 150px; /* Définissez la hauteur souhaitée, ajustez la valeur selon vos besoins */
+    object-fit: cover; /* Garde les proportions et coupe l'image pour l'adapter à la boîte */
+  }
+  
+
+@media (min-width: 1024px) {
+
+    .Fonction {
+        display: flex;
+        padding: 50px 180px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        align-self: stretch;
+        background: #FFF
+    }
+    
+    .choix {
+        width: 322.486px;
+        height: 72.379px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: var(--Background, #F6F6F6);
+    /* Shadow/Instructions */
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cartes {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
+        flex-direction : column;
+      
+      }
+      
+      .repas {
+        width: 50%; /* Chaque article occupera 50% de la largeur du conteneur parent */
+        box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur spécifiée */
+        padding: 10px; /* Ajoute un espace intérieur autour des articles */
+       
+      }
+      
+      /* Optionnel: ajuster le style des éléments enfants */
+      .selection {
+        display: flex;
+        justify-content: space-between; /* Espacement égal entre les éléments internes */
+        align-items: center; /* Aligner verticalement les éléments internes */
+      }
+      
+      .footer-gris {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      
+      .footer-gris div,
+      .footer-gris p,
+      .footer-gris a {
+        margin-left: 20px; /* Espace horizontal entre les éléments */
+      }
+      
+.palette {
+    width: 1055px;
+    height: 1221px;
+    flex-shrink: 0;
+    padding : 30px;
+    flex-direction : column;
+    
+}
+}
+
