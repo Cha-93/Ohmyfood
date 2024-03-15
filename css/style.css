@@ -78,12 +78,6 @@ h2 {
   margin-top: 50px; /* Vous pouvez ajuster la valeur en fonction de l'espace souhaité */
 }
 
-body section {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 45px;
-}
-
 .titre1 {
   display: flex;
   align-items: center; /* Aligner les éléments au centre verticalement */
@@ -192,13 +186,14 @@ h2 {
 
 .choix2 {
   color: black;
+  margin-bottom: 0px;
 }
 
 .cmenu {
   color: black;
 }
 
-h3 {
+.selection-title {
   margin-bottom: 0px;
   margin-left: 20px;
 }
@@ -219,8 +214,6 @@ h3 {
 .repas img {
   width: 100%;
   align-self: center;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
   height: 260px;
   background-size: cover;
 }
@@ -250,12 +243,18 @@ h3 {
   /* Ajoutez d'autres propriétés CSS au besoin */
 }
 
+h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+}
+
 .cmenu p {
   font-size: 11px; /* Ajustez la taille de la police selon vos préférences */
 }
 
 .prix {
   font-size: 11px;
+  padding-top: 20px;
 }
 
 .choix2 {
@@ -291,6 +290,7 @@ a {
 .badge-container {
   position: relative;
   display: inline-block;
+  color: white !important;
   width: 100%;
 }
 
@@ -338,6 +338,12 @@ header {
   background-color: #F6F6F6;
   padding: 20px; /* Ajustez selon vos besoins */
   box-sizing: border-box;
+}
+
+.cmenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 footer {
