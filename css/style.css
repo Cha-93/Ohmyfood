@@ -20,21 +20,16 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .loading-container .loading span {
   position: absolute;
   width: 50px;
-  height: 50px;
+  height: 25px;
   background: #e06fda;
-}
-.loading-container .loading span:nth-child(1) {
-  animation: loading 2s infinite both;
-}
-.loading-container .loading span:nth-child(2) {
-  animation: loading 2s infinite both;
-  animation-delay: 1s;
+  animation: loading 3s forwards;
 }
 
 .header-arrow {
@@ -71,7 +66,7 @@ html, body {
 }
 .menu-like:hover .like-bg, .repas-like:hover .like-bg {
   opacity: 1;
-  z-index: 99;
+  z-index: 80;
 }
 
 #hero-section2 {
@@ -101,6 +96,9 @@ html, body {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 10px;
+  animation-name: cardAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .menu-animation:hover .menu-button {
   animation-name: anim-menu-button;
@@ -716,25 +714,11 @@ footer h1 {
   }
 }
 @keyframes loading {
-  0% {
-    top: 0;
+  from {
     left: 0;
   }
-  25% {
-    top: 0;
-    left: 50%;
-  }
-  50% {
-    top: 50%;
-    left: 50%;
-  }
-  75% {
-    top: 50%;
-    left: 0%;
-  }
-  100% {
-    top: 0;
-    left: 0;
+  to {
+    left: 100px;
   }
 }
 @keyframes closeLoading {
@@ -743,6 +727,16 @@ footer h1 {
   }
   to {
     display: none;
+  }
+}
+@keyframes cardAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
 
