@@ -18,6 +18,12 @@ html, body{
     font-weight: 400;
 }
 
+.header-arrow{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%)
+}
+
 .numero {
     background-color: #9356DC;
     border-radius: 50%;
@@ -43,8 +49,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     background-color: $navbar-color;
     box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -152,7 +158,7 @@ h2{
     padding: 17px 10px;
     background-color: $background-gray;
     border-radius: 20px; 
-    width: 100%;
+    width: 87%;
     
     box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -203,6 +209,7 @@ h2{
 
 .menu2 {
     position: relative;
+    margin-top: 0px;
 }
 
 .menu2::after {
@@ -243,6 +250,7 @@ h2{
 h1 {
     font-family: Shrikhand;
     color: black;
+
 }
 
 h2 {
@@ -523,10 +531,12 @@ footer{
 
 .menu0 {
     margin: 20px; /* Ajoute une marge de 20 pixels en haut et en bas, ajustez la valeur selon vos besoins */
+    margin-top: 40px;
 }
 
 .repas {
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .repas img {
@@ -615,7 +625,7 @@ footer{
     
     .palette {
         width: 85%;
-        height: 1221px;
+        height: 1000px;
         flex-shrink: 0;
         padding : 30px;
         flex-direction : column;
@@ -628,9 +638,14 @@ footer{
 @media (min-width: 1024px) {
     
  
-
+.palette{
+    padding-right: 250px;
+    padding-left: 250px;
+}
   
-
+    .choix {
+        width:100%;
+    }
 
     .Fonction {
         display: flex;
@@ -656,11 +671,13 @@ footer{
         display: flex;
         flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
         flex-direction: row;
+        width: 93%;
+        justify-content: center;
         
     }
 
     .menu0 {
-        margin-left: 70px; 
+        margin-left: 110px; 
     }
     
     .repas {
@@ -689,4 +706,8 @@ footer{
         justify-content: center;
     }
     
+    
+    .repas img, .repas2 img {
+        height: 380px;
+    }
 }
