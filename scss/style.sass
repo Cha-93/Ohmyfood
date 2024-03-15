@@ -112,9 +112,6 @@ html, body
     margin-bottom: 20px
     overflow: hidden
     border-radius: 10px
-    animation-name: cardAnimation
-    animation-duration: 1s
-    animation-fill-mode: forwards
     
     &:hover 
         .menu-button
@@ -122,7 +119,7 @@ html, body
             animation-duration: 0.4s
             animation-fill-mode: forwards
         .menu-header
-            width: 26%
+            width: 45%
         
     
 
@@ -540,6 +537,21 @@ header
         top: -30px
         left: 0
         border-radius: 30px 30px 0 0
+
+    article
+        opacity: 0
+        animation-name: cardAnimation
+        animation-duration: 1s
+        animation-fill-mode: forwards
+
+    article:nth-child(2)
+        animation-delay: 0.1s
+    
+    article:nth-child(3)
+        animation-delay: 0.2s
+    
+    article:nth-child(4)
+        animation-delay: 0.3s
         
     
 
@@ -714,6 +726,11 @@ footer
         padding: 30px
         flex-direction: column
         padding-top: 5px
+
+    .menu-animation 
+        &:hover 
+            .menu-header
+                width: 40%
         
     
 
@@ -796,34 +813,30 @@ footer
         width: 100%
         box-sizing: border-box
         
-    
-    
-
     .selection 
         display: flex
         justify-content: space-between
         align-items: center
     
-    
     #hero-section
         p
             width: 100%
         
-    
-    
-    
-    
     .categories 
-        
         flex-direction: row
         width: 100%
         justify-content: center
     
-    
-    
-    .repas img, .repas2 img 
+    .repas img
         height: 200px
     
+    .repas2 img 
+        height: 450px
+
+    .menu-animation 
+        &:hover 
+            .menu-header
+                width: 25%
 
 
 
